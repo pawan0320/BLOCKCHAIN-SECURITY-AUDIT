@@ -1,0 +1,28 @@
+import random
+
+class Blockchain:
+    def __init__(self, num_nodes):
+        self.num_nodes = num_nodes
+        self.mining_power = [random.randint(1, 10) for _ in range(num_nodes)]
+        self.malicious_node = -1
+    
+    def simulate_51_attack(self):
+        total_power = sum(self.mining_power)
+        malicious_power = sum(self.mining_power[self.malicious_node:])
+
+        if malicious_power / total_power > 0.51:
+            return True  # Successful 51% attack
+        else:
+            return False
+
+# Number of blockchain nodes
+num_nodes = 100
+blockchain = Blockchain(num_nodes)
+
+# Simulate adding a malicious node with extra mining power
+blockchain.mining_power[random.randint(0, num_nodes-1)] = 70  # Malicious node gains 70% mining power
+
+if blockchain.simulate_51_attack():
+    print("[*] 51% attack successful! Blockchain is compromised.")
+else:
+    print("[+] 51% attack failed. Blockchain is secure.")
