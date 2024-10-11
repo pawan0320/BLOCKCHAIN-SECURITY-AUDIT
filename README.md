@@ -1,3 +1,15 @@
+Name: Pawan Sai Kodali
+
+Company: CODTECH IT SOLUTION
+
+ID: CT08DS7900
+
+Domain: Cyber Security & Ethical Hacker
+
+Duration: Sep to Oct 2024
+
+Mentor: Neela Santhu
+
 # BLOCKCHAIN-SECURITY-AUDIT
 Overview of the Blockchain Security Audit Project
 A Blockchain Security Audit aims to identify vulnerabilities and potential attack vectors in blockchain systems. The audit includes analyzing smart contracts, consensus mechanisms, and the network infrastructure to find security weaknesses that attackers might exploit.
